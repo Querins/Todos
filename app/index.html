@@ -9,7 +9,19 @@
 </head>
 <body>
 
-  <h1>Test</h1>
+  <div id="app">
+
+    <div class="wrap">
+      <div class="search">
+        <input type="text" name="" value="" placeholder="Input your todo" v-model='input' @keyup.enter='add'>
+        <button type="button" name="button" class="btn" @click='add'>Add</button>
+      </div>
+      <div class="todo" v-for="post in matchedPosts">
+        <h1 class="title">{{ post.title }}</h1>
+      </div>
+    </div>
+
+  </div>
 
   <script src="../build/bundle.js" charset="utf-8"></script>
 </body>
